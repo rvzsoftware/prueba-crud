@@ -19,3 +19,4 @@ Con su respectiva migración, vista y controlador además deberá realizar valid
 Hacer un PR al proyecto.
 
 ¡Suerte!
+[crud.zip](https://github.com/Enrikeroglez/prueba-crud/files/9033260/crud.zip)
