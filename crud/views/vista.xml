@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_crud_form" model="ir.ui.view">
+            <field name="name">crud</field>
+            <field name="model">crud</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="name" attrs="{'readonly':[('state' , '!=' , 'draft')]}" />
+                            <field name="mobile_phone" attrs="{'readonly':[('state' , '!=' , 'draft')]}" />
+                            <field name="work_email" attrs="{'readonly':[('state' , '!=' , 'draft')]}" />
+                            <field name="identification_id" attrs="{'readonly':[('state' , '!=' , 'draft')]}" />
+                            <field name="observ" attrs="{'readonly':[('state' , '!=' , 'draft')]}" />
+                            <field name="state" widget="statusbar" />
+                        </group>s
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_crud_create">
+            <field name="name">Creación de una prueba CRUD</field>
+            <field name="res_model">crud</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem id="id_menu_crud"  name="Relización de prueba CRUD"/>
+        <menuitem action="action_crud_create" id="id_submenu_crud" parent="id_menu_crud" name="crud" sequence="1"/>
+
+    </data>
+</odoo>
